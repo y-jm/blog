@@ -1,7 +1,9 @@
 module.exports = {
   "title": "",
   "description": "",
-  "dest": "public",
+  "base": "/dist/",
+  "dest": "dist",
+
   plugins: [
     ["vuepress-plugin-nuggets-style-copy", {
       copyText: "复制代码",  //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --save
