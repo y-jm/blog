@@ -1,8 +1,7 @@
 ---
 title: JS数组常用的属性和方法
 date: 2020-07-16 11:11:14
-tags: JS
-categories: JavaScript
+categories: javascript
 ---
 ##### length 属性判断数组的长度
 

@@ -1,10 +1,11 @@
 {
-  "name": "",
+  "name": "个人博客",
   "version": "1.0.0",
-  "author": "reco_luan",
+  "author": "jank",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
-    "build": "vuepress build ."
+    "build": "vuepress build .",
+    "deploy":"tcb framework deploy"
   },
   "devDependencies": {
     "vuepress": "1.8.2",
