@@ -22,6 +22,20 @@ module.exports = {
   ],
   "head": [
     [
+      "script",
+      {},
+      `
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?da55d9221d1de559e6426dc6f12f5b46";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+        `
+    ],
+    [
       "link",
       {
         "rel": "icon",
@@ -87,11 +101,11 @@ module.exports = {
     "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
-    "lastUpdated": "Last Updated",
-    "author": "",
+    // "lastUpdated": "Last Updated",
+    // "author": "",
     "authorAvatar": "https://19-blog.oss-cn-shenzhen.aliyuncs.com/baracktocat.jpg",
-    "record": "xxxx",
-    "startYear": "2017"
+    "record": "湘ICP备2021011916号",
+    // "startYear": "2017"
   },
   "markdown": {
     "lineNumbers": true

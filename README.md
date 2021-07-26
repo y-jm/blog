@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: hello world
-tagline: 记录平时在工作或者学习的过程
+tagline: 总结记录学习的代码片段
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

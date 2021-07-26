@@ -1,9 +1,9 @@
 {
-  "name": "个人博客",
+  "name": "myblog",
   "version": "1.0.0",
   "author": "jank",
   "scripts": {
-    "dev": "vuepress dev . --open --host \"localhost\"",
+    "dev": "vuepress dev . --open --host 'localhost'",
     "build": "vuepress build .",
     "deploy":"tcb framework deploy"
   },
