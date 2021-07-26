@@ -1,9 +1,15 @@
 module.exports = {
-  "title": "",
+  "title": "🌞",
   "description": "",
   "base": "/dist/",
   "dest": "dist",
-
+  locales: {
+    // 键名是该语言所属的子路径
+    // 作为特例，默认语言可以使用 '/' 作为其路径。
+    '/': {
+      lang: 'zh-CN',
+    },
+  },
   plugins: [
     ["vuepress-plugin-nuggets-style-copy", {
       copyText: "复制代码",  //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --save
@@ -45,10 +51,11 @@ var _hmt = _hmt || [];
     [
       "meta",
       {
+        "lang": "zh-CN",
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
-    ]
+    ],
   ],
   "theme": "reco",
   "themeConfig": {
@@ -101,8 +108,8 @@ var _hmt = _hmt || [];
     "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
-    // "lastUpdated": "Last Updated",
-    // "author": "",
+    "lastUpdated": "Last Updated",
+    "author": "sun",
     "authorAvatar": "https://19-blog.oss-cn-shenzhen.aliyuncs.com/baracktocat.jpg",
     "record": "湘ICP备2021011916号",
     // "startYear": "2017"
