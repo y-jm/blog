@@ -1,6 +1,6 @@
 ---
 title: 多个SSHKey配置
-date: 2021-04-26 11:26:46
+date: 2021-07-26 20:46:46
 tags:
 - git
 ---
@@ -9,43 +9,29 @@ tags:
 
 配置SSH公钥，避免每次使用git推送都需要输入账号和密码
 
+## 查看git本地配置
+执行下面命令，如果打印为空说明没有设置
+```bash
+git config --list
+```
+
 ## 设置git的用户名和密码
 
 设置git的用户名和密码，如果已经设置则忽略
 
 ```bash
-git config ---global user.name "用户名"
+git config --global user.name "用户名"
 git config --global user.email "邮箱地址"
 ```
 
 ## 生成公钥
 
-复制命令`ssh-keygen -t rsa -C 'xxxxx@xx.com' -f ~/.ssh/blog_id_rsa`生成一个`blog`的`SSH Key`，一路回车就可以了(把邮箱改成你自己的)。可以看到`.ssh`文件夹下面多了两个文件。
-
-```shell
-y@DESKTOP-SFLMN83 MINGW64 ~/.ssh
-$ ssh-keygen -t rsa -C "1159370654@qq.com"  -f ~/.ssh/blog_id_rsa
-Generating public/private rsa key pair.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /c/Users/y/.ssh/blog_id_rsa
-Your public key has been saved in /c/Users/y/.ssh/blog_id_rsa.pub
-The key fingerprint is:
-SHA256:z2xFv53zyiFn+ivIHqnul535wJ03YRV3ZVcZSEu6X4A 1159370654@qq.com
-The key's randomart image is:
-+---[RSA 3072]----+
-|            .o.o%|
-|            +..o=|
-|           E.o  .|
-|           .... .|
-|        S  .. .+ |
-|         + +..o+o|
-|         .B+++B+o|
-|         o=.=B o+|
-|       o+o. .+*o.|
-+----[SHA256]-----+
-
+复制下面命令，会生成一个`blog`的`SSH Key`，
+```bash
+ssh-keygen -t rsa -C '你的邮箱' -f ~/.ssh/blog_id_rsa
 ```
+一路回车就可以了(把邮箱改成你自己的)。可以看到`.ssh`文件夹下面多了两个文件。
+
 
 ![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210426112955.png)
 
