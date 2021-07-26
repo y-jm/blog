@@ -1,6 +1,6 @@
 ---
 title: 多个SSHKey配置
-date: 2021-07-26 20:46:46
+date: 2021-07-26 21:40:46
 tags:
 - git
 ---
@@ -69,6 +69,7 @@ CODING 提示: Hello y, You've connected to coding.net via SSH. This is a Person
 y，你好，你已经通过 SSH 协议认证 coding.net 服务，这是一个个人公钥.
 公钥指纹：19:b9:96:2a:2f:2a:6f:c6:6c:10:8f:a1:90:3c:7f:e2
 ```
+**要使用ssh链接clone仓库，不能使用https拉取**
 
 ## remote-ssh 配置
 
@@ -85,5 +86,22 @@ chmod 700 ~/.ssh
 
 vim ~/.ssh/authorized_keys #把blog_id_rsa.pub中的内容复制进去
 chmod 600 ~/.ssh/authorized_keys 
+```
+
+### 遇到的问题
+#### 问题一
+使用ssh每次拉取还是出现下面这种请求，使用`ssh-keygen -p`
+```bash
+[root@VM-4-7-centos blog]# git pull
+Enter passphrase for key '/root/.ssh/blog_id_rsa': 
+```
+
+```bash
+[root@VM-4-7-centos blog]# ssh-keygen -p
+Enter file in which the key is (/root/.ssh/id_rsa): /root/.ssh/blog_id_rsa #输入id_rsa的路径
+Enter old passphrase: #密码
+Enter new passphrase (empty for no passphrase): #直接回车
+Enter same passphrase again: #直接回车
+Your identification has been saved with the new passphrase.
 ```
 
