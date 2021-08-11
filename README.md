@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: hello world
+heroText: Hello World
 tagline: 总结记录学习的代码片段
 # heroImage: /hero.png
 # heroImageStyle: {
