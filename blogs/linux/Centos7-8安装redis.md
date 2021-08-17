@@ -123,8 +123,8 @@ systemctl status redis  #查看redis运行状态
 ```shell
 vim /etc/profile
 #添加下面两句 REDIS_HOME是redis所在目录
-export REDIS_HOME=/usr/local/redis/
-export PATH=$PATH:$REDIS_HOME/bin
+export REDIS_HOME=/root/redis-5.0.0/
+export PATH=$PATH:$REDIS_HOME/src
 ```
 
 ```shell
