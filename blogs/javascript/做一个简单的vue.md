@@ -1,6 +1,7 @@
 ---
 title: 做一个简单的vue
 date: 2019-08-12 11:55:05
+categories: javascript
 tags:
 - 前端
 - Vue

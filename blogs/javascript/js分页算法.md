@@ -1,7 +1,8 @@
 ---
 title: js分页算法
 date: 2021-01-30 12:32:38
-tags: JS
+categories: javascript
+tags: javascript
 ---
 
 int pagesize // 每页记录数
