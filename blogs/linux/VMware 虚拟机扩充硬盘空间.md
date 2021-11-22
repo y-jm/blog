@@ -53,7 +53,7 @@ tags:
 命令(输入 m 获取帮助)：
 ```
 
-接着进行重启，必须进行重启，否则无法格式化分区sda4
+<font  color='red'>接着进行重启，必须进行重启，否则无法格式化分区sda4</font>
 
 ## 3.添加新LVM到已有的LVM组，实现卷扩容
 
@@ -64,14 +64,16 @@ lvm>pvcreate /dev/sda3　　           #这是初始化刚才的分区3
 
 lvm>vgextend centos /dev/sda3     #将初始化过的分区加入到虚拟卷组centos (卷和卷组的命令可以通过 vgdisplay )
 
-lvm>vgdisplay -v或者vgdisplay查看free PE /Site
+lvm>vgdisplay -v或者vgdisplay查看free PE /Site #如下图
 
-lvm>lvextend -l+1279 /dev/mapper/centos-root　　#扩展已有卷的容量（1279 是通过vgdisplay查看free PE /Site的大小）
+lvm>lvextend -l+15359 /dev/mapper/centos-root　　#扩展已有卷的容量（15359 是通过vgdisplay查看free PE /Site的大小）
 
 lvm>pvdisplay #查看卷容量，这时你会看到一个很大的卷了
 
 lvm>quit 　#退出
 ```
+
+![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20211122101325.png)
 
 ## 4.文件系统的扩容
 
@@ -84,3 +86,15 @@ centos6执行
 然后`df -h`查看磁盘空间
 
 原文链接：https://blog.csdn.net/qq_44297579/article/details/107318096
+
+### 5.可能遇到的问题
+
+```bash
+lvm> vgextend centos /dev/sda4
+  Couldn't create temporary archive name.
+```
+
+原因：存储使用100%，无法挂载，须预留部分空间出来。
+
+解决办法：
+删掉系统其中无用文件，继续（vgextend centos /dev/sdb）操作即可。
