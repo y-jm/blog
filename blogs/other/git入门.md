@@ -1,6 +1,6 @@
 ---
 title: git入门
-date: 2021-04-26 11:26:46
+date: 2021-12-02 12:26:46
 tags:
 - git
 ---
@@ -122,3 +122,11 @@ git push
 ```bash
 git pull --rebase origin master
 ```
+
+## 7.回滚
+
+```bash
+git reset --hard HEAD^ 回退到上个版本
+git reset --hard 指定commit的哈希码
+```
+
