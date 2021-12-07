@@ -1,0 +1,30 @@
+---
+title: 使用pkg打包
+date: 2021-12-07 21:04
+categories:
+ - nodejs
+tags:
+ - pkg
+---
+### 1.安装
+
+```shell
+yarn add pkg -D
+```
+
+### 2.package.json配置
+
+```json
+"scripts": {
+    "pkg": "pkg . --out-path=dist/"
+  },
+  "pkg": {
+    "assets": ["views/**/*"]
+  },
+```
+
+### 3.可能遇到问题
+
+第一次打包的时候，会遇到下包很慢很可能超时的问题
+
+到https://github.com/zeit/pkg-fetch/releases下载对应的包，然后包移动到~/.pkg-cache/v3.2目录下
