@@ -1,6 +1,6 @@
 ---
 title: git入门
-date: 2021-12-02 12:26:46
+date: 2021-12-08 12:26:46
 tags:
 - git
 ---
@@ -126,7 +126,19 @@ git pull --rebase origin master
 ## 7.回滚
 
 ```bash
-git reset --hard HEAD^ 回退到上个版本
-git reset --hard 指定commit的哈希码
+git reset --hard HEAD^ #回退到上个版本
+git reset --hard #指定commit的哈希码
+```
+
+## 8.标签
+
+```bash
+git tag # 查询本地所有tag
+git log --pretty=oneline #查看历史提交tag
+git tag beta0.1 # 新增无备注的tag（默认在当前分支最后一个commit上添加tag）
+git tag beta0.1  01c80763e36e7  #在指定commit上新增tag
+git push origin beta0.1 #推送标签
+git tag -d beta0.1 #删除本地分支标签
+git push origin :refs/tags/beta0.1 #删除远程标签
 ```
 
