@@ -1,8 +1,9 @@
 ---
 title: JS常用函数
 date: 2021-11-10 19:11:14
-tags: javascript
 categories: 前端
+tags:
+- javascript
 ---
 ## 1.根据身份证17位判断性别
 
