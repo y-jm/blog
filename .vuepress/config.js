@@ -1,7 +1,7 @@
 module.exports = {
   "title": "🌞",
   "description": "",
-  "base": "/dist/",
+  "base": "/",
   "dest": "dist",
   locales: {
     // 键名是该语言所属的子路径
