@@ -1,6 +1,6 @@
 ---
 title: git入门
-date: 2021-12-08 12:26:46
+date: 2021-12-15 19:25:46
 tags:
 - git
 ---
@@ -65,6 +65,7 @@ git init -y # git init 默认创建一个master
 
 ```bash
 git branch test  #创建一个test
+git checkout -b test #创建一个test分支并切换
 ```
 
 切换分支命令：
@@ -140,5 +141,12 @@ git tag beta0.1  01c80763e36e7  #在指定commit上新增tag
 git push origin beta0.1 #推送标签
 git tag -d beta0.1 #删除本地分支标签
 git push origin :refs/tags/beta0.1 #删除远程标签
+```
+
+## 9.避免linux文件权限更改，导致git文件状态变化，设置如下：
+
+```shell
+git config  core.filemode false
+git config --global core.filemode false #全局设置
 ```
 
