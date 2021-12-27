@@ -1,6 +1,6 @@
 ---
 title: 使用pkg打包
-date: 2021-12-07 21:04
+date: 2021-12-27 21:04
 categories:
  - nodejs
 tags:
@@ -16,10 +16,15 @@ yarn add pkg -D
 
 ```json
 "scripts": {
-    "pkg": "pkg . --out-path=dist/"
+    "pkg": "pkg . --out-path=dist/" //打包到指定目录
   },
   "pkg": {
-    "assets": ["views/**/*"]
+    "assets": ["views/**/*"]  //打包的静态文件
+    "targets": [	// 打包指定的版本
+  	"node12.22.7-win-x64",
+     "node12.22.7-macos-x64",
+     "node12.22.7-linux-x64"
+		],
   },
 ```
 
