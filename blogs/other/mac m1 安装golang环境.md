@@ -21,10 +21,10 @@ tags:
 vim ~/.zshrc
 ```
 增加golang配置
-
+```ini
 export GOBIN=/usr/local/go/bin
-
 export PATH=$PATH:$GOBIN
+```
 
 对配置文件执行`source`让新修改的配置文件生效
 ```shell
