@@ -10,13 +10,19 @@ tags:
 
 ## VMware 扩展磁盘容量
 
-## 1.虚拟机设置
+## 1.简述
+
+由于初期磁盘容量设置太少，所以后期需要扩展磁盘容量
+
+<b>注意：</b>磁盘容量扩大可以，缩小不行
+
+## 2.虚拟机设置
 
 先关闭虚拟机，右键虚拟机设置，选择扩展，如果不关闭，则如下，无法点击扩展按钮，点击提示有快照就需要把快照删除
 
 ![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210701160612.png)
 
-## 2.虚拟机操作
+## 3.虚拟机操作
 
 启动VMware环境下的Linux操作系统,需要root账号身份登陆
 
@@ -28,7 +34,7 @@ tags:
 
 ![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210701160846.png)
 
-### 2.1 管理sda磁盘
+### 3.1 管理sda磁盘
 
 输入 `fdisk /dev/sda`
 
@@ -55,7 +61,7 @@ tags:
 
 <font  color='red'>接着进行重启，必须进行重启，否则无法格式化分区sda4</font>
 
-## 3.添加新LVM到已有的LVM组，实现卷扩容
+## 4.添加新LVM到已有的LVM组，实现卷扩容
 
 ```bash
 lvm　　　　　　　　　　　　           #进入lvm管理
@@ -75,7 +81,7 @@ lvm>quit 　#退出
 
 ![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20211122101325.png)
 
-## 4.文件系统的扩容
+## 5.文件系统的扩容
 
 以上只是做成了卷扩容，接下来做文件系统的真正扩容
 centos7执行
@@ -87,7 +93,7 @@ centos6执行
 
 原文链接：https://blog.csdn.net/qq_44297579/article/details/107318096
 
-### 5.可能遇到的问题
+## 6.可能遇到的问题
 
 ```bash
 lvm> vgextend centos /dev/sda4
