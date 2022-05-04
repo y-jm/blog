@@ -125,7 +125,7 @@ var _hmt = _hmt || [];
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
     "author": "sun",
-    "authorAvatar": "http://img.xiyangyang.cc/blog/baracktocat.jpg",
+    "authorAvatar": "https://img.xiyangyang.cc/blog/baracktocat.jpg",
     "record": "湘ICP备2021011916号",
     // "startYear": "2017"
   },

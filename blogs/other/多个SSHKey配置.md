@@ -33,21 +33,21 @@ ssh-keygen -t rsa -C '你的邮箱' -f ~/.ssh/blog_id_rsa
 一路回车就可以了(把邮箱改成你自己的)。可以看到`.ssh`文件夹下面多了两个文件。
 
 
-![](http://img.xiyangyang.cc/blog/20210426112955.png)
+![](https://img.xiyangyang.cc/blog/20210426112955.png)
 
 ## 在coding.net上面添加公钥
 
 进入个人账户设置，点击侧边栏SSH公钥，再点击新增公钥弹出配置弹窗，如下图
 
-![](http://img.xiyangyang.cc/blog/20210426114137.png)
+![](https://img.xiyangyang.cc/blog/20210426114137.png)
 
-![](http://img.xiyangyang.cc/blog/20210426114253.png)
+![](https://img.xiyangyang.cc/blog/20210426114253.png)
 
-![](http://img.xiyangyang.cc/blog/20210426114537.png)
+![](https://img.xiyangyang.cc/blog/20210426114537.png)
 
 使用记事本打开blog_id_rsa.pub，复制里面的公钥，然后添加进去，确认保存
 
-![](http://img.xiyangyang.cc/blog/20210426113614.png)
+![](https://img.xiyangyang.cc/blog/20210426113614.png)
 
 ## 生成config文件
 

@@ -69,7 +69,7 @@ dashboard_pwd = admin #访问密码
 
 通过 `ps -aux|grep frp| grep -v grep`找出进程ID，然后使用 kill -9  杀死进程
 
-![](http://img.xiyangyang.cc/blog/20210611095125.png)
+![](https://img.xiyangyang.cc/blog/20210611095125.png)
 
 ```sh
 [root@localhost ~]# ps -aux|grep frp| grep -v grep
@@ -117,29 +117,29 @@ D:\frp_0.33.0_windows_386>.\frpc.exe -c frpc.ini
 
 ### 打开任务计划程序
 
-![](http://img.xiyangyang.cc/blog/20210611102040.png)
+![](https://img.xiyangyang.cc/blog/20210611102040.png)
 
 ### 创建任务
 
-![](http://img.xiyangyang.cc/blog/20210611102153.png)
+![](https://img.xiyangyang.cc/blog/20210611102153.png)
 
 ### 【常规】选项卡设置
 
 在常规选项卡设置，填写名称，选择’不管用户是否登录都要运行‘、’使用最高权限运行‘、‘隐藏’
 
-![常规选项卡设置页面](http://img.xiyangyang.cc/blog/20210611104313.png)
+![常规选项卡设置页面](https://img.xiyangyang.cc/blog/20210611104313.png)
 
 ### 【触发器】选项卡设置
 
-![触发器选项卡设置页面](http://img.xiyangyang.cc/blog/20210611102745.png)
+![触发器选项卡设置页面](https://img.xiyangyang.cc/blog/20210611102745.png)
 
 ### 【操作】选项卡设置
 
-![操作选项卡设置页面](http://img.xiyangyang.cc/blog/20210611103126.png)
+![操作选项卡设置页面](https://img.xiyangyang.cc/blog/20210611103126.png)
 
 **点击确定之后，输入电脑密码就可以了，然后就可以开机试一下**
 
-![](http://img.xiyangyang.cc/blog/20210611103750.png)
+![](https://img.xiyangyang.cc/blog/20210611103750.png)
 
 
 

@@ -20,7 +20,7 @@ tags:
 
 先关闭虚拟机，右键虚拟机设置，选择扩展，如果不关闭，则如下，无法点击扩展按钮，点击提示有快照就需要把快照删除
 
-![](http://img.xiyangyang.cc/blog/20210701160612.png)
+![](https://img.xiyangyang.cc/blog/20210701160612.png)
 
 ## 3.虚拟机操作
 
@@ -32,7 +32,7 @@ tags:
 
 显示现在只有两个分区，说明新创建的分区是sda3
 
-![](http://img.xiyangyang.cc/blog/20210701160846.png)
+![](https://img.xiyangyang.cc/blog/20210701160846.png)
 
 ### 3.1 管理sda磁盘
 
@@ -79,7 +79,7 @@ lvm>pvdisplay #查看卷容量，这时你会看到一个很大的卷了
 lvm>quit 　#退出
 ```
 
-![](http://img.xiyangyang.cc/blog/20211122101325.png)
+![](https://img.xiyangyang.cc/blog/20211122101325.png)
 
 ## 5.文件系统的扩容
 
