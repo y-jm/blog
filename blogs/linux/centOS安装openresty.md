@@ -78,7 +78,7 @@ tar -xzvf openresty-1.15.8.1.tar.gz
 
 然后出现下面的图片就是成功了
 
-![](https://picgo-1256471247.cos.ap-chengdu.myqcloud.com/20200225182542.png)
+![](http://img.xiyangyang.cc/blog/20200225182542.png)
 
 然后使用下面命令编译安装完成
 
@@ -88,7 +88,7 @@ gmake && gmake install
 
 然后使用`/usr/local/openresty/nginx/sbin/nginx`启动服务器，还是使用`curl localhost`看是否启动成功，成功则返回一段HTML文本，如下图
 
-![](https://picgo-1256471247.cos.ap-chengdu.myqcloud.com/20200225183142.png)
+![](http://img.xiyangyang.cc/blog/20200225183142.png)
 
 到此openresty就全部安装完成，如果想着浏览器访问，则需要开放相对应的端口
 
@@ -115,7 +115,7 @@ export PATH
 
 执行`source /etc/profile` 重启一下，然后在任何目录下只要输入nginx就可以了，如下图
 
-![](https://picgo-1256471247.cos.ap-chengdu.myqcloud.com/20200225184852.png)
+![](http://img.xiyangyang.cc/blog/20200225184852.png)
 
 ### 2.方法（二）
 

@@ -9,7 +9,7 @@ tags:
 ## 1.安装包下载
 下载地址: https://golang.google.cn/dl/,下载下图选中的安装包
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/%E6%88%AA%E5%B1%8F2022-04-03%20%E4%B8%8B%E5%8D%8810.26.25.png)
+![](http://img.xiyangyang.cc/blog/%E6%88%AA%E5%B1%8F2022-04-03%20%E4%B8%8B%E5%8D%8810.26.25.png)
 
 **安装**
 

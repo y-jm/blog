@@ -11,15 +11,15 @@ tags:
 
 从https://github.com/coreybutler/nvm-windows/releases下载nvm-setup.zip安装包版本（如下图）
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210309095944.png)
+![](http://img.xiyangyang.cc/blog/20210309095944.png)
 
 ## 2. 安装
 
 打开exe之后，一路点击Next下一步，只到如下图，选择nvm安装目录，第二张图是选择node的安装目录
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210309100010.png)
+![](http://img.xiyangyang.cc/blog/20210309100010.png)
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210309100050.png)
+![](http://img.xiyangyang.cc/blog/20210309100050.png)
 
 ## 3.设置镜像
 
@@ -28,7 +28,7 @@ tags:
 ` node_mirror:npm.taobao.org/mirrors/node/`
 `npm_mirror:npm.taobao.org/mirrors/npm/`
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20210309100113.png)
+![](http://img.xiyangyang.cc/blog/20210309100113.png)
 
 ## 4. 常用命令
 

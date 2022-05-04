@@ -39,7 +39,7 @@ vi /etc/sysconfig/iptables
 
 ### 添加8080端口
 
-![image-20210617150854676](https://19-blog.oss-cn-shenzhen.aliyuncs.com/image-20210617150854676.png)
+![image-20210617150854676](http://img.xiyangyang.cc/blog/image-20210617150854676.png)
 
 ## 重启防火墙使配置生效
 

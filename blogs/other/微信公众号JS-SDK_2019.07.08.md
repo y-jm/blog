@@ -22,7 +22,7 @@ tags:
 
 由于配置必须要一个域名，我这里使用[natapp](https://natapp.cn/)内网穿透用于测试，怎么配置请看配置说明
 
-![1562232359293](https://iamges-1256471247.cos.ap-chengdu.myqcloud.com/1562232359293.png)
+![1562232359293](http://img.xiyangyang.cc/blog/1562232359293.png)
 
 <font color="red"> 	注：JS接口域名前面不能加http或者https,不然报路径错误 </font>
 
@@ -284,7 +284,7 @@ module.exports = sign;
 
 使用微信开发工具测试，成功如下图：
 
-![1562549568548](https://iamges-1256471247.cos.ap-chengdu.myqcloud.com/20190708/1562549568548.png)
+![1562549568548](http://img.xiyangyang.cc/blog/20190708/1562549568548.png)
 
 #### 4.1.5缓存access_token和jsapi_ticket
 

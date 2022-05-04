@@ -26,11 +26,11 @@ Git（window系统使用cmd也行）
 
 在码云上新建一个创建无论是否公开还是私用的（私用的仓库使用pages服务，静态页面也会被公开的）
 
-![](https://iamges-1256471247.cos.ap-chengdu.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20190808165530.png)
+![](http://img.xiyangyang.cc/blog/QQ%E6%88%AA%E5%9B%BE20190808165530.png)
 
-![](https://iamges-1256471247.cos.ap-chengdu.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20190808170049.png)
+![](http://img.xiyangyang.cc/blog/QQ%E6%88%AA%E5%9B%BE20190808170049.png)
 
-![](https://iamges-1256471247.cos.ap-chengdu.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20190808170400.png)
+![](http://img.xiyangyang.cc/blog/QQ%E6%88%AA%E5%9B%BE20190808170400.png)
 
 复制上图生成的链接，接下来需要在_config.yml设置url，不然引入文件路径找不到
 

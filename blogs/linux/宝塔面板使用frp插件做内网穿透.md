@@ -10,17 +10,17 @@ tags: frp
 
 ## 2.安装
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/f0Yl6Y7fYF.png)
+![](http://img.xiyangyang.cc/blog/f0Yl6Y7fYF.png)
 
 点击截图1软件商店，截图2搜索，选择截图3服务端进行配置，可以需要登录才能安装
 
 ## 3.服务端配置
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/2CmDYrr8Cm.png)
+![](http://img.xiyangyang.cc/blog/2CmDYrr8Cm.png)
 
 截图1需要设置和frpc.ini客户端配置文件中server_port的值一致，截图2密钥也要和frpc.ini中的token一致，最后点击保存配置
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/image-20200702144713181.png)
+![](http://img.xiyangyang.cc/blog/image-20200702144713181.png)
 
 截图1需要设置http端口不然无法在浏览器中正常访问，<font color='red'>最后记得启动frps</font>
 
@@ -30,11 +30,11 @@ tags: frp
 
 在https://github.com/fatedier/frp/releases下载对应系统的压缩包，然后打开frpc.ini文件进行配置
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/image-20200702145702417.png)
+![](http://img.xiyangyang.cc/blog/image-20200702145702417.png)
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/image-20200702145910158.png)
+![](http://img.xiyangyang.cc/blog/image-20200702145910158.png)
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/image-20200702150457574.png)
+![](http://img.xiyangyang.cc/blog/image-20200702150457574.png)
 
 截图1配置服务端参数，server_addr = 服务器ip，server_port 和tcp端口一致，token = 之前设置的验证密钥
 
@@ -46,13 +46,13 @@ tags: frp
 ./frpc -c ./frpc.ini
 ```
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/image-20200702151827377.png)
+![](http://img.xiyangyang.cc/blog/image-20200702151827377.png)
 
 ### 4.2 SSH配置
 
 remote_port 你连接的端口号
 
-![](https://19-blog.oss-cn-shenzhen.aliyuncs.com/20200902135149.png)
+![](http://img.xiyangyang.cc/blog/20200902135149.png)
 
 ## 5.frp开机自启
 
