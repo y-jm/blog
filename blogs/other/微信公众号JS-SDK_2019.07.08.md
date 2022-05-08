@@ -3,7 +3,7 @@ title: 微信公众号JS-SDK
 date: 2019-07-08 12:00:00
 tags: 
 - 微信公众号
-- nodeJS
+- nodejs
 ---
 
 ## 1.简介

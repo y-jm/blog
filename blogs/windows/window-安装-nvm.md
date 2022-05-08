@@ -4,7 +4,7 @@ date: 2021-02-02 11:36:15
 categories:
 - windows
 tags:
-- nodeJS
+- nodejs
 ---
 
 ## 1.下载
