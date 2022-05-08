@@ -31,7 +31,7 @@ usermod –g service_group wang
 
 #### 3.退组
 
-```sehll
+```shell
 gpasswd –d wang service_group 
 ```
 
