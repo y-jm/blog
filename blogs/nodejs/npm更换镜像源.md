@@ -1,10 +1,10 @@
 ---
 title: npm更换镜像源
 date: 2022-08-29 23:15
-tags:
- - npm
 categories:
  - nodejs
+tags:
+ - npm
 ---
 ## 1.查看镜像源
 ```bash
