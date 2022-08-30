@@ -26,8 +26,8 @@ jobs:
       # 依赖
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-	  with:
-	    node-version: '16'
+	with:
+	  node-version: 16
       # 安装依赖
       - name: npm install
         run: npm install
