@@ -8,11 +8,9 @@ on:
   # 监听push操作
   push:
     branches: [ "master" ]
-  
   # Allows you to run this workflow manually from the Actions tab
   # 允许您从“操作”选项卡手动运行此工作流
   workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 # 工作流
 jobs:
@@ -20,13 +18,10 @@ jobs:
   build:
      # 运行环境
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # 依赖
       - uses: actions/checkout@v3
-      
-      - name: Set up Node.js
       - uses: actions/setup-node@v3
       # 安装依赖
       - name: npm install
