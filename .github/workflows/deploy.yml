@@ -17,32 +17,35 @@ jobs:
   # This workflow contains a single job called "build"
   build:
      # 运行环境
-    runs-on: ubuntu-latest
+    runs-on: Ubuntu-20.04
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # 依赖
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+    - uses: actions/checkout@v1
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.15.0'
       # 安装依赖
-      - name: npm install
-        run: npm install
-      - name: npm run build
-      # 开始打包到服务器
-        run: npm run build --if-present
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
-        env:
-        # SSH_PRIVATE_KEY: 是在服务器上生成的 SSH 私钥，可以使用命令 ssh-keygen -m PEM -t rsa -b 4096 生成，并配置到仓库的 Secrets 中。
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-        # ARGS: 默认即可。
-          ARGS: '-rltgoDzvO --delete'
-        #  需要上传到服务器上的文件的目录
-          SOURCE: ''
-        # 服务器公网 IP 或域名。
-          REMOTE_HOST: '43.138.140.150'
-        #  服务器 SSH 用户名。
-          REMOTE_USER: 'dev'
-        # 文件上传到服务器上保存的目录。
-          TARGET: '/home/dev/web'
-        # 可指定部分文件不上传。
-         # EXCLUDE:
+    - name: npm install
+      run: npm install
+    - name: npm run build
+    # 开始打包到服务器
+      run: npm run build
+    - name: depoly
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
+      # SSH_PRIVATE_KEY: 是在服务器上生成的 SSH 私钥，可以使用命令 ssh-keygen -m PEM -t rsa -b 4096 生成，并配置到仓库的 Secrets 中。
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+      # ARGS: 默认即可。
+        ARGS: '-rltgoDzvO --delete'
+      #  需要上传到服务器上的文件的目录
+        SOURCE: ''
+      # 服务器公网 IP 或域名。
+        REMOTE_HOST: '43.138.140.150'
+      #  服务器 SSH 用户名。
+        REMOTE_USER: 'dev'
+      # 文件上传到服务器上保存的目录。
+        TARGET: '/home/dev/web'
+      # 可指定部分文件不上传。
+        # EXCLUDE:
