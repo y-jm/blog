@@ -27,7 +27,7 @@ jobs:
         # 服务器公网 IP 或域名。
           REMOTE_HOST: '43.138.140.150'
         #  服务器 SSH 用户名。
-          REMOTE_USER: 'dev'
+          REMOTE_USER: 'root'
         # 文件上传到服务器上保存的目录。
           TARGET: '/home/dev/web'
 
