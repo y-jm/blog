@@ -24,8 +24,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # 依赖
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v1
+	  - name: Install Node.js
+      - uses: actions/setup-node@v1
+	  with:
+	    node-version: '10.x'
       # 安装依赖
       - name: npm install
         run: npm install
@@ -33,12 +36,12 @@ jobs:
         run: npm run build
       # 开始打包到服务器
       - name: deploy to staging server
-        uses: easingthemes/ssh-deploy@v2.0.7
+        uses: easingthemes/ssh-deploy@main
         env:
         # SSH_PRIVATE_KEY: 是在服务器上生成的 SSH 私钥，可以使用命令 ssh-keygen -m PEM -t rsa -b 4096 生成，并配置到仓库的 Secrets 中。
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         # ARGS: 默认即可。
-          ARGS: "-avz --delete"
+          ARGS: "-rltgoDzvO --delete"
         #  需要上传到服务器上的文件的目录
           SOURCE: "dist/"
         # 服务器公网 IP 或域名。
