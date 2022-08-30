@@ -27,17 +27,17 @@ jobs:
       - name: npm install
         run: npm install
       - name: npm run build
-        run: npm run build
       # 开始打包到服务器
-      - name: deploy to staging server
-        uses: easingthemes/ssh-deploy@v2.0.8
+        run: npm run build --if-present
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
         env:
         # SSH_PRIVATE_KEY: 是在服务器上生成的 SSH 私钥，可以使用命令 ssh-keygen -m PEM -t rsa -b 4096 生成，并配置到仓库的 Secrets 中。
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         # ARGS: 默认即可。
-          ARGS: '-avzr --delete'
+          ARGS: '-rltgoDzvO --delete'
         #  需要上传到服务器上的文件的目录
-          SOURCE: './dist/*'
+          SOURCE: ''
         # 服务器公网 IP 或域名。
           REMOTE_HOST: '43.138.140.150'
         #  服务器 SSH 用户名。
