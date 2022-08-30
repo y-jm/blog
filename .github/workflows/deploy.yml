@@ -28,7 +28,6 @@ jobs:
       
       - name: Set up Node.js
       - uses: actions/setup-node@v3
-	  
       # 安装依赖
       - name: npm install
         run: npm install
