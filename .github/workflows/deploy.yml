@@ -37,13 +37,13 @@ jobs:
       with:
         switches: -avzr --delete
         #需要上传到服务器上的文件的目录
-        path: 'dist/'
+        path: dist/
         #服务器公网 IP 或域名。
-        remote_host: '43.138.140.150'
+        remote_host: xiyangyang.cc
         remote_port: 22
         #服务器 SSH 用户名。
-        remote_user: 'root'
+        remote_user: root
         #文件上传到服务器上保存的目录。
-        remote_path: '/home/dev/web/'
+        remote_path: /home/dev/web/
         #远程 ssh 密钥
         remote_key: ${{ secrets.SERVER_SSH_KEY }}
