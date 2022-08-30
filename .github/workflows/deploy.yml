@@ -23,7 +23,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-	  # 依赖
+      # 依赖
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       # 安装依赖
