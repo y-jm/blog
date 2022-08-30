@@ -9,6 +9,11 @@ on:
   push:
     branches: [ "master" ]
 
+env:
+  AZURE_WEBAPP_NAME: your-app-name    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: '14.x'                # set this to the node version to use
+  
   # Allows you to run this workflow manually from the Actions tab
   # 允许您从“操作”选项卡手动运行此工作流
   workflow_dispatch:
@@ -25,12 +30,9 @@ jobs:
     steps:
       # 依赖
       - uses: actions/checkout@v3
+      
       - name: Set up Node.js
       - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-	  cache: 'npm'
-	  
       # 安装依赖
       - name: npm install
         run: npm install
