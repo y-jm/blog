@@ -37,12 +37,12 @@ jobs:
         # ARGS: 默认即可。
           ARGS: "-rltgoDzvO --delete"
         #  需要上传到服务器上的文件的目录
-          SOURCE: "dist/"
+          SOURCE: "dist"
         # 服务器公网 IP 或域名。
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_HOST: 43.138.140.150
         #  服务器 SSH 用户名。
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_USER: root
         # 文件上传到服务器上保存的目录。
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+          TARGET: /home/dev
         # 可指定部分文件不上传。
          # EXCLUDE:
