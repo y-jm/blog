@@ -20,18 +20,31 @@ jobs:
     runs-on: Ubuntu-20.04
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # 依赖
     - uses: actions/checkout@v2
     - name: Install Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14.15.0'
-      # 安装依赖
+      # 1.安装依赖
     - name: npm install
       run: npm install
     - name: npm run build
-    # 开始打包到服务器
+
+    # 2.生成静态文件
       run: npm run build
+    # 3.同步到gitee
+    - name: Sync to Gitee
+      uses: wearerequired/git-mirror-action@master
+        env:
+          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+      with:
+        # 注意替换为你的 GitHub 源仓库地址
+        source-repo: git@github.com:y-jm/blog.git
+        # 注意替换为你的 Gitee 目标仓库地址
+        destination-repo: git@gitee.com:ouyjm/blog.git
+
+    # 3.开始打包到服务器
     - name: depoly
       uses: burnett01/rsync-deployments@5.2.1
       with:
@@ -39,11 +52,11 @@ jobs:
         #需要上传到服务器上的文件的目录
         path: dist/
         #服务器公网 IP 或域名。
-        remote_host: xiyangyang.cc
-        remote_port: 22
+        remote_host: ${{ secrets.REMOTE_HOST }}
+        remote_port: ${{ secrets.REMOTE_PORT }}
         #服务器 SSH 用户名。
-        remote_user: dev
+        remote_user: ${{ secrets.REMOTE_USER }}
         #文件上传到服务器上保存的目录。
-        remote_path: /home/dev/blog/
+        remote_path: ${{ secrets.REMOTE_PATH }}
         #远程 ssh 密钥
         remote_key: ${{ secrets.SERVER_SSH_KEY }}
