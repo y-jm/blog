@@ -24,8 +24,8 @@ jobs:
           # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
           switches: -avzh
           path: dist/
-          remote_path: /home/dev/web/
+          remote_path: /home/dev/blog/
           remote_host: xiyangyang.cc
           remote_port: 22
-          remote_user: root
+          remote_user: dev
           remote_key: ${{ secrets.SERVER_SSH_KEY }}
