@@ -1,4 +1,4 @@
-name: sync_to_gitee 
+name: sync_to_coding_net 
 on: push
 jobs:
   sync:
