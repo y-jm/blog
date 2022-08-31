@@ -10,7 +10,7 @@ tags:
 
 ## 2.部署Bitwarden
 ```shell
-docker run -d --name bitwarden \
+sudo docker run -d --name bitwarden \
  --restart unless-stopped \
  -e WEBSOCKET_ENABLED=true \
  -v /home/ubuntu/bitwarden/:/data/ \
@@ -47,7 +47,7 @@ location /notifications/hub/negotiate {
 
 ## 4.关闭新用户注册
 ```shell
-docker run -d --name bitwarden \
+sudo docker run -d --name bitwarden \
   --restart unless-stopped \
   -e SIGNUPS_ALLOWED=false \
   -e WEBSOCKET_ENABLED=true \
