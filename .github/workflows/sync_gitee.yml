@@ -1,5 +1,5 @@
 name: sync_to_gitee 
-on: page_build
+on: push
 jobs:
   sync:
     runs-on: ubuntu-latest
