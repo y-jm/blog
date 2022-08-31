@@ -9,9 +9,14 @@ tags:
 ## 1.简述
 使用github actions完成github仓库和gitee仓库同步
 ## 2.生成密钥
-文件带`.pub`为公钥，不带就是私钥
+输入`ssh-keygen`命令生成密钥，文件带`.pub`为公钥，不带就是私钥
 ```bash
 ssh-keygen
+```
+```bash
+➜  ~ ll
+-rw-------  1 y  staff   2.5K Aug 31 23:21 id_rsa
+-rw-r--r--  1 y  staff   576B Aug 31 23:21 id_rsa.pub
 ```
 ## 3.添加公钥
 **github和gitee两边都需要配置公钥**
