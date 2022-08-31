@@ -11,12 +11,12 @@ tags:
 ## 2.部署Bitwarden
 ```shell
 docker run -d --name bitwarden \
->   --restart unless-stopped \
->   -e WEBSOCKET_ENABLED=true \
->   -v /www/wwwroot/bitwarden/:/data/ \
->   -p 8087:80 \
->   -p 3012:3012 \
->   vaultwarden/server:latest
+ --restart unless-stopped \
+ -e WEBSOCKET_ENABLED=true \
+ -v /home/ubuntu/bitwarden/:/data/ \
+ -p 8087:80 \
+ -p 3012:3012 \
+ vaultwarden/server:latest
 ```
 
 ## 3.配置反向代理
@@ -51,7 +51,7 @@ docker run -d --name bitwarden \
   --restart unless-stopped \
   -e SIGNUPS_ALLOWED=false \
   -e WEBSOCKET_ENABLED=true \
-  -v /www/wwwroot/bitwarden/:/data/ \
+  -v /home/ubuntu/bitwarden/:/data/ \
   -p 8087:80 \
   -p 3012:3012 \
   vaultwarden/server:latest
