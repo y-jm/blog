@@ -4,8 +4,7 @@ date: 2021-08-17 19:16:11
 categories:
  - linux
 tags:
-- nginx
-- centos
+- nodejs
 ---
 
 ### 1.使用镜像源
