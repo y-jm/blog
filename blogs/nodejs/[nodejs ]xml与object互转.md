@@ -35,10 +35,4 @@ const xml = builder.buildObject({name:"MongoDB",type:"NoSQL"});
 console.log(xml)
 ```
 打印如下：
-```bash
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-  <name>MongoDB</name>
-  <type>NoSQL</type>
-</root>
-```
+![](https://img.xiyangyang.cc/blog/%E6%88%AA%E5%B1%8F2022-09-07%20%E4%B8%8B%E5%8D%887.42.31.png)
