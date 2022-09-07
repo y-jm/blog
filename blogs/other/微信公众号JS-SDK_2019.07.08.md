@@ -284,7 +284,7 @@ module.exports = sign;
 
 使用微信开发工具测试，成功如下图：
 
-![1562549568548](https://img.xiyangyang.cc/blog/20190708/1562549568548.png)
+![1562549568548](https://img.xiyangyang.cc/blog/1562549568548.png)
 
 #### 4.1.5缓存access_token和jsapi_ticket
 
