@@ -38,4 +38,25 @@ app.use(express.json())
 
 ### 2.2 application/json
 
-通过`application/json`提交参数，参数需要JSON.stringify转换一下，其它设置同上
+通过`application/json`提交参数，前端提交参数需要JSON.stringify转换一下，其它设置同上
+
+### 2.3 multipart/form-data
+使用multiparty中间件
+#### 1.安装
+```bash
+npm install multiparty -S
+```
+#### 2.示例
+```javascript
+app.post("/api/msg/send",(req,res)=>{
+    let form = new multiparty.Form();
+    form.parse(req, function(err,fields,file){
+        if(err){
+            console.log(err);
+        }
+        console.log(fields);
+    })
+    res.send("数据已接收")
+})
+```
+
