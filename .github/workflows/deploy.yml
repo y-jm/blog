@@ -20,8 +20,8 @@ jobs:
     runs-on: Ubuntu-20.04
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
     - name: Install Node.js
+      uses: actions/checkout@v2
       uses: actions/setup-node@v2
       with:
         node-version: '14.15.0'
@@ -35,7 +35,7 @@ jobs:
       
     # 3.开始打包到服务器
     - name: depoly
-    - uses: burnett01/rsync-deployments@5.2.1
+      uses: burnett01/rsync-deployments@5.2.1
       with:
         switches: -avzr --delete
         #需要上传到服务器上的文件的目录
@@ -50,20 +50,18 @@ jobs:
         #远程 ssh 密钥
         remote_key: ${{ secrets.SERVER_SSH_KEY }}
   
-    steps:
     # 4.同步到gitee
     - name: sync_gitee
-    - uses: wearerequired/git-mirror-action@master
+      uses: wearerequired/git-mirror-action@master
       env:
         SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
       with:
         source-repo: "git@github.com:y-jm/blog.git"
         destination-repo: "git@gitee.com:ouyjm/blog.git"
 
-    steps:
     # 5.同步到coding_net
     - name: sync_coding_net
-    - uses: wearerequired/git-mirror-action@master
+      uses: wearerequired/git-mirror-action@master
       env:
         SSH_PRIVATE_KEY: ${{ secrets.CODING_NET_PRIVATE_KEY }}
       with:
