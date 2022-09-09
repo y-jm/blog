@@ -49,7 +49,8 @@ jobs:
         remote_path: ${{ secrets.REMOTE_PATH }}
         #远程 ssh 密钥
         remote_key: ${{ secrets.SERVER_SSH_KEY }}
-
+  
+    steps:
     # 4.同步到gitee
     - name: sync_gitee
     - uses: wearerequired/git-mirror-action@master
@@ -59,6 +60,7 @@ jobs:
         source-repo: "git@github.com:y-jm/blog.git"
         destination-repo: "git@gitee.com:ouyjm/blog.git"
 
+    steps:
     # 5.同步到coding_net
     - name: sync_coding_net
     - uses: wearerequired/git-mirror-action@master
