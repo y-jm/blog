@@ -61,9 +61,8 @@ jobs:
 
     # 5.同步到coding_net
     - name: sync_coding_net
-      uses: wearerequired/git-mirror-action@master
-      run: |
-          git config --global --add safe.directory /github/workspace
+    - uses: wearerequired/git-mirror-action@master
+      run: git config --global --add safe.directory /github/workspace
       env:
         SSH_PRIVATE_KEY: ${{ secrets.CODING_NET_PRIVATE_KEY }}
       with:
