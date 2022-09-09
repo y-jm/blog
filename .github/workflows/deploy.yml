@@ -64,6 +64,6 @@ jobs:
     - uses: wearerequired/git-mirror-action@master
       env:
         SSH_PRIVATE_KEY: ${{ secrets.CODING_NET_PRIVATE_KEY }}
-        with:
+      with:
         source-repo: "git@github.com:y-jm/blog.git"
         destination-repo: "git@e.coding.net:jank-yang/blog/Vblog.git"
