@@ -58,10 +58,6 @@ jobs:
       with:
         source-repo: "git@github.com:y-jm/blog.git"
         destination-repo: "git@gitee.com:ouyjm/blog.git"
-
-
-    - name: Fix issue with repository ownership
-      run: git config --global --add safe.directory /github/workspace
     
     # 5.同步到coding_net
     - name: sync_coding_net
