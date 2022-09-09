@@ -1,5 +1,5 @@
 ---
-title: mysql安装使用
+title: 在centos7版本安装mysql5.7
 date: 2021-07-19 0:02
 categories:
  - mysql
@@ -10,7 +10,6 @@ tags:
 # 安装
 
 ### 1.前提条件
-
 先检查系统是否装有mysql，如下图，这里返回空值，说明没有，不然需要把mysql卸载干净,如果需要卸载可以参考这篇[博文](https://www.cnblogs.com/wanghuaijun/p/6398240.html)
 
 ```shell
@@ -120,10 +119,14 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '新的密码';
 
 
 ### 9.修改密码校验策略
-
+如果想要查看MySQL完整的初始密码规则,登陆后执行以下命令
+```sql
+mysql> SHOW VARIABLES LIKE 'validate_password%';
+```
 使用下面命令修改，默认密码要求就不必是大小写字母数字特殊字母的组合且至少要8位长度
 
 ```sql
+mysql> set global validate_password_length=4;
 mysql> set global validate_password_policy=LOW; 
 ```
 
@@ -157,7 +160,7 @@ source /home/s.sql
 
 ![](https://img.xiyangyang.cc/blog/20210309094451.png)
 
-### 12.使用第三方工具登录
+### 12.任意ip访问
 
 **如果只需要本机使用，则不需要看下面的**
 
@@ -192,12 +195,12 @@ mysql> SELECT host  FROM user;
 +-----------+
 3 rows in set (0.00 sec)
 
+mysql>flush privileges;
 mysql> exit;
 ```
+然后在其它电脑上就可以连接上了
 
-然后执行 `systemctl restart mysqld`重启一下mysql服务，就可以连接上了
-
-### 13.找回密码
+### 13.忘记密码
 
 1、`vi /etc/my.cnf`打开mysql的配置文件，在配置文件中添加：skip-grant-tables
 
@@ -212,6 +215,15 @@ systemctl restart mysqld
 ```sql
 mysql -uroot -p
 ```
+4.直接修改密码
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED BY '新的密码';
+```
+修改完成之后，把`vi /etc/my.cnf`中的<b>skip-grant-tables</b>去除掉，然后重启mysql服务
+```bash
+systemctl restart mysqld
+```
+
 ## 14.初始化数据库
 ### 1.备份数据库
 在<b>/etc/my.cnf</b>设置`innodb_force_recovery=6`强制启动数据库

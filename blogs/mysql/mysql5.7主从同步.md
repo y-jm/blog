@@ -1,5 +1,5 @@
 ---
-title: mysql主从同步
+title: mysql5.7主从同步
 date: 2021-07-18 23:52
 categories:
  - mysql
@@ -25,9 +25,9 @@ mysql> flush tables with read lock;
 ```
 
 ### 3.1进行数据备份
+在设置完同步之后，主库同步之前的数据不会同步到从库上面，如果需要保持主从数据完全一致，需要先把主库的数据先备份，然后恢复到从库上面
 
- 备份主库，使用命令把数据备份到mysql.bak.sql文件 ，命令如下：
-
+备份命令如下：
 ```sql
 --备份所有数据库
 mysqldump -u root -p --all-databases>/tmp/mysql.bak.sql
@@ -101,6 +101,11 @@ binlog_ignore_db=sys
 ```sql
 mysql> grant replication slave on *.* to 'slave'@'%' identified by '123456';
 ```
+可能会因为密码策略太简单而失败，如果需要设置简单密码，则修改密码策略，修改密码如下：
+```sql
+mysql> set global validate_password_length=4; 
+mysql> set global validate_password_policy=LOW; 
+```
 
 ### 3.5查看master状态
 
@@ -165,7 +170,7 @@ mysql> source /tmp/mysql.bak.sql; --导入数据备份
 
 ### 4.3 设置【主库】信息
 
-使用`show slave status \G`查看，如果已有连接参数， 可以使用`reset slave all`来清除连接参数 
+使用`show slave status \G`查看，如果已有连接参数， 可以使用`reset slave all`来重置所有连接，或者使用`reset slave for channel '300'`来指定重置某人连接 
 
 `mysql -uroot -p`登录，进入mysql命令行
 
@@ -181,7 +186,7 @@ MASTER_PASSWORD='123456',  #创建的有同步复制权限授权用户密码
 #【关键处】从主库的该log_bin文件开始读取同步信息，主库show master status返回结果
 MASTER_LOG_FILE='mysql-bin.0000018', 
 #【关键处】从文件中指定位置开始读取，主库show master status返回结果
-MASTER_LOG_POS=438 
+MASTER_LOG_POS=438 #和主库的Position项一致
 for channel '300'; #通道名称
 Query OK, 0 rows affected
 
@@ -281,7 +286,3 @@ mysql>  show variables like 'log_error%';
 若需要单独启动或停止某个同步通道，可使用如下命令：
 start slave for channel '300';   //启动名称为300的同步通道
 stop slave for channel '300';   //停止名称为300的同步通道
-
-## 提示
-
-在设置同步之前的数据是没有同步的，只有在设置同步后，你在主库操作的数据都会同步到从库。
