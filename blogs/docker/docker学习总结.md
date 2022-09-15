@@ -10,54 +10,7 @@ tags:
 
 # docker学习总结
 
-## 1.centos7安装docker
-
-### 卸载旧版本
-
-```shell
-sudo yum remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-engine
-```
-
-### 安装依赖
-
-```bash
-sudo yum install -y yum-utils
-```
-
-### 添加阿里云镜像
-
-```bash
-yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-```
-
-### 安装
-
-```bash
-sudo yum install docker-ce docker-ce-cli containerd.io
-```
-
-### 启动
-
-```bash
-sudo systemctl start docker
-```
-
-### 设置开机自启
-
-```shell
-systemctl enable docker
-```
-
-
-
-## 2.容器的使用
+## 1.容器的使用
 
 容器都是基于镜像，所以要通过一个镜像来启动容器
 
@@ -85,7 +38,7 @@ $ docker run -it centos  /bin/bash
 - **/bin/bash**：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。
 
 
-## 3.数据卷
+## 2.数据卷
 
 通过挂载数据卷，避免容器停止数据被销毁
 
@@ -160,7 +113,7 @@ rw readwrite #可读可写
 
 通过 --volumes-from 实现数据卷共享
 
-## 4.Dockerfile
+## 3.Dockerfile
 
 **什么是 Dockerfile？**
 
@@ -221,7 +174,7 @@ CMD ["/redis-5.0.0/src/redis-server"]
 docker build -t nginx:centos .
 ```
 
-## 5.自定义网络
+## 4.自定义网络
 
 查看所有网络，如下：
 
@@ -271,7 +224,7 @@ mynet 表示网络名
 
 ![](https://img.xiyangyang.cc/blog/20210609140750.png)
 
-## 6.自定义centos
+## 5.自定义一个centos镜像
 
 通过Dockerfile构建镜像，具体内容如下：
 
@@ -355,19 +308,7 @@ docker run -d --name centos01 --privileged=true centos-close-3 /usr/sbin/init
 docker run -d -P --name docker-1 -v /home/docker1/etc/ssh:/etc/ssh --privileged=true docker-test /bash
 ```
 
-## 7. docker-compose
-
-Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。
-
-### 镜像安装
-
-使用github下载安装太慢，推荐使用镜像安装，如下：
-
-```bash
-curl -L https://get.daocloud.io/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-# 设置可运行
-chmod +x /usr/local/bin/docker-compose
-```
+## 6. docker-compose
 
 ### 版本检查
 

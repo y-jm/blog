@@ -68,6 +68,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```shell
 systemctl start docker  #启动docker服务
 systemctl stop docker  #关闭docker服务
+systemctl enable docker #开机运行
 ```
 
 ## 4.查看docker-compose是否安装成功

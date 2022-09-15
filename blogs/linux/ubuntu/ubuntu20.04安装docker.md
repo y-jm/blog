@@ -37,5 +37,7 @@ docker version
 
 ## 6.开机启动docker
 ```bash
-sudo systemctl enable docker
+sudo systemctl start docker  #启动docker服务
+sudo systemctl stop docker  #关闭docker服务
+sudo systemctl enable docker #开机运行
 ```
