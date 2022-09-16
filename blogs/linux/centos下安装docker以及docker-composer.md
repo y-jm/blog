@@ -17,7 +17,7 @@ Docker是一个开源的应用容器引擎，让开发者可以打包他们的�
 ### 2.1卸载旧版本
 
 ```shell
-$ sudo yum remove docker \
+sudo yum remove docker \
          docker-client \
          docker-client-latest \
          docker-common \

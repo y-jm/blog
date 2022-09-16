@@ -19,7 +19,7 @@ tags:
 如果我们本地没有 centos 镜像，我们可以使用 docker pull 命令来载入 centos 镜像
 
 ```shell
-$ docker pull centos 
+docker pull centos 
 ```
 
 #### 2.启动容器
@@ -27,7 +27,7 @@ $ docker pull centos
 以下命令使用 centos 镜像启动一个容器，参数为以命令行模式进入该容器
 
 ```shell
-$ docker run -it centos  /bin/bash
+docker run -it centos  /bin/bash
 ```
 
 参数说明：

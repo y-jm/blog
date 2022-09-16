@@ -64,7 +64,7 @@ IdentityFile ~/.ssh/blog_id_rsa
 使用下面命令测试看是否添加成功，这样你就可以不需要每次输入用户名和密码了（第一次还是需要的）
 
 ```shell
-$ ssh -T git@e.coding.net
+ssh -T git@e.coding.net
 CODING 提示: Hello y, You've connected to coding.net via SSH. This is a Personal Key.
 y，你好，你已经通过 SSH 协议认证 coding.net 服务，这是一个个人公钥.
 公钥指纹：19:b9:96:2a:2f:2a:6f:c6:6c:10:8f:a1:90:3c:7f:e2
