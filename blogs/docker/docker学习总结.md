@@ -73,20 +73,34 @@ MYSQL_ROOT_PASSWORD=123456 --name mysql01 mysql:5.7
 
 ```shell
 # 匿名挂载 只写了容器内的路径，没有写容器外的路径
-docker run -d -P --name nginx01 -v /etc/nginx nginx
-[root@localhost ~]# docker volume ls
+docker run -d -P --name nginx01 -v /etc/nginx nginx #创建一个nginx容器
+docker volume ls  #查看数据卷
+```
+`docker volume ls` 回车如下：
+```
 DRIVER    VOLUME NAME
 local     ebec36c5a058eafff723bdc74c0634b338653cf590dd78bdcb1a21ba86c0af3a
+```
+
+```bash
 # 具名挂载 -v 卷名称：容器内路径 指定挂载卷的名称 
-[root@localhost ~]# docker run -d -P --name nginx02 -v jm-nginx:/etc/nginx nginx
-8bfdd07cddc1bcf5dfae86b96bb41c549aa77ca4dbdcbb190deae0562bbfd33b
-[root@localhost ~]# docker volume ls
+docker run -d -P --name nginx02 -v jm-nginx:/etc/nginx nginx
+```
+```bash
+docker volume ls
+```
+`docker volume ls` 回车如下：
+```
 DRIVER    VOLUME NAME
 local     ebec36c5a058eafff723bdc74c0634b338653cf590dd78bdcb1a21ba86c0af3a
 local     jm-nginx 
-
+```
+```bash
 # 通过  docker volume  inspect  可以查看详情信息
-[root@localhost ~]# docker volume  inspect jm-nginx
+docker volume  inspect jm-nginx
+```
+`docker volume  inspect jm-nginx` 回车如下：
+```
 [
     {
         "CreatedAt": "2021-06-09T10:40:43+08:00",
@@ -101,11 +115,11 @@ local     jm-nginx
 
 ```
 
-```sh
+```bash
 # 通过 -v 容器内路径：ro rw 改写读写权限
-ro readonly #只读
-rw readwrite #可读可写
-[root@localhost ~]# docker run -d -P --name nginx02 -v jm-nginx:/etc/nginx:ro nginx
+#ro readonly 只读
+#rw readwrite 可读可写
+docker run -d -P --name nginx02 -v jm-nginx:/etc/nginx:ro nginx
 # ro 说明这个路径只能在宿主机操作，不能在容器内操作
 ```
 
@@ -178,8 +192,10 @@ docker build -t nginx:centos .
 
 查看所有网络，如下：
 
-```sh
-[root@localhost ~]# docker network ls 
+```bash
+docker network ls 
+```
+```
 NETWORK ID     NAME      DRIVER    SCOPE
 a96a7e4968ca   bridge    bridge    local
 893312e161d7   host      host      local
@@ -217,7 +233,7 @@ mynet 表示网络名
 
 ```sh
 # docker network connect 自定义网络名 容器名
-[root@localhost ~]# docker network connect mynet tomcat-test
+docker network connect mynet tomcat-test
 # 连通之后就是把tomcat-test放到mynet下
 # 一个容器两个IP地址
 ```

@@ -27,7 +27,7 @@ tags:
 启动VMware环境下的Linux操作系统,需要root账号身份登陆
 
 ```bash
-[root@localhost ~]# fdisk -l
+fdisk -l
 ```
 
 显示现在只有两个分区，说明新创建的分区是sda3
@@ -49,7 +49,7 @@ tags:
 输入【w】，保持修改
 
 ```bash
-[root@localhost ~]# fdisk /dev/sda
+fdisk /dev/sda
 欢迎使用 fdisk (util-linux 2.23.2)。
 
 更改将停留在内存中，直到您决定将更改写入磁盘。

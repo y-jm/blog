@@ -22,7 +22,7 @@ tags:
 使用tar -zxvf 解压
 
 ```shell
-[root@localhost ~]# tar -zxvf frp_0.33.0_linux_amd64.tar.gz
+tar -zxvf frp_0.33.0_linux_amd64.tar.gz
 ```
 
 ### frps.ini 配置
@@ -48,7 +48,7 @@ dashboard_pwd = admin #访问密码
 ### 运行
 
 ```bash
-[root@localhost ~]#  ./frps -c frps.ini
+./frps -c frps.ini
 ```
 
 如果运行起来没有问题，可以通过nohup在后台访问，这样就不需要开一个终端专门运行它
@@ -56,13 +56,13 @@ dashboard_pwd = admin #访问密码
 **有nohup.out文件**
 
 ```sh
-[root@localhost ~]# nohup ./frps -c frps.ini  &
+nohup ./frps -c frps.ini  &
 ```
 
 **没有nohup.out文件**
 
 ```shell
-[root@localhost ~]# nohup ./frps -c frps.ini >/dev/null 2>&1 &
+nohup ./frps -c frps.ini >/dev/null 2>&1 &
 ```
 
 ### 停止
@@ -72,8 +72,8 @@ dashboard_pwd = admin #访问密码
 ![](https://img.xiyangyang.cc/blog/20210611095125.png)
 
 ```sh
-[root@localhost ~]# ps -aux|grep frp| grep -v grep
-[root@localhost ~]# kill -9 6720
+ps -aux|grep frp| grep -v grep
+kill -9 6720
 ```
 
 ## 本地配置frpc
@@ -109,8 +109,8 @@ D:\frp_0.33.0_windows_386>.\frpc.exe -c frpc.ini
 
 ### linux运行
 
-```sh
-[root@localhost ~]# ./frpc -c frpc.ini
+```bash
+./frpc -c frpc.ini
 ```
 
 ## 设置window 开机启动
