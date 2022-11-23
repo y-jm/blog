@@ -6,13 +6,13 @@ categories:
 tags:
  - express
 ---
-### 1.安装
+## 1.安装
 
 ```shell
 yarn add express
 ```
 
-### 2.基本配置
+## 2.基本配置
 
 ```javascript
 const express=require("express");
@@ -61,7 +61,7 @@ app.post("/api/msg/send",(req,res)=>{
     res.send("数据已接收")
 })
 ```
-## 3.解决跨域
+## 4.解决跨域
 安装cors中间件
 ```bash
 yarn add cors -S
