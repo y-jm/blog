@@ -13,7 +13,15 @@ export default{
                 instance.code=el.innerText;
                 instance.$mount();
                 el.classList.add("code-copy-el");
-                el.appendChild(instance.$el);
+                el.parentNode.appendChild(instance.$el);
+                //绑定鼠标悬浮事件（显示copy）
+                el.parentNode.addEventListener("mouseover",function(){
+                    instance.$el.style.opacity=0.5;
+                },false);
+                 //绑定鼠标悬浮事件（隐藏copy）
+                el.parentNode.addEventListener("mouseout",function(){
+                    instance.$el.style.opacity=0;
+                },false);
             })
         },100)
     },

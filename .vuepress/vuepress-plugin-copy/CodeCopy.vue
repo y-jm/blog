@@ -41,9 +41,10 @@ export default{
         position: absolute;
         bottom: 10px;
         right: 7.5px;
-        opacity: .5;
+        opacity: 0;
         cursor: pointer;
         font-size: 14px;
+        z-index: 2;
     }
     .code-copy-btn:hover{
         opacity: 1;
