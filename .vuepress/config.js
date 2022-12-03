@@ -11,12 +11,7 @@ module.exports = {
     },
   },
   plugins: [
-    // ["vuepress-plugin-nuggets-style-copy", {
-    //   copyText: "复制代码",  //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --save
-    //   tip: {
-    //     content: "复制成功!"
-    //   }
-    // }],
+    require('./vuepress-plugin-copy/index.js'),
     // md文件支持中文文件名
     [
       "permalink-pinyin",
