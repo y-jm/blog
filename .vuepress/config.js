@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "🌞",
+  "title": "🌞记录开发的代码片段",
   "description": "",
   "base": "/",
   "dest": "dist",
