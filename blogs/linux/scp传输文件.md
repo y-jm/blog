@@ -1,6 +1,6 @@
 ---
 title: 使用scp传输文件
-date: 2020-06-16 14:47:00
+date: 2022-06-16 14:47:00
 categories:
 - linux
 ---
