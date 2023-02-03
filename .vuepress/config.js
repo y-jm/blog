@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
     "lastUpdated": "Last Updated",
     "author": "sun",
     "authorAvatar": "https://img.xiyangyang.cc/blog/baracktocat.jpg",
-    "record": "湘ICP备2021011916号",
+    "record": "湘ICP备2021011916号-1",
     "recordLink":"https://beian.miit.gov.cn/",
   },
   "markdown": {
