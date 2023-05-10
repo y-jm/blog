@@ -24,7 +24,7 @@ module.exports = {
     [
       '@vuepress/google-analytics',
       {
-        'ga': 'G-YFEQY02L6Q' //替换成自己实际申请的ID
+        'ga': 'G-TCX4H7KV2P' //替换成自己实际申请的ID
       }
     ]
   ],
@@ -44,25 +44,6 @@ module.exports = {
         `
     ],
     /*************** end 添加百度统计 ***********/
-    /*************** start 添加谷歌统计 ***********/
-    [
-      "script",
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-YFEQY02L6Q",
-        async: true
-      }
-    ],
-    [
-      "script",
-      {},
-      `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YFEQY02L6Q');
-      `
-    ],
-    /*************** end 添加谷歌统计 ***********/
     [
       "link",
       {
