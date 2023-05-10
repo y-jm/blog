@@ -29,22 +29,6 @@ module.exports = {
     ]
   ],
   "head": [
-    [
-      "script",
-      {
-        "src": "https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"
-      },
-      `
-        const aegis = new Aegis({
-        id: 'JjxKDclO9xPQ7rz4zD', // 上报 id
-        uin: 'xxx', // 用户唯一 ID（可选）
-        reportApiSpeed: true, // 接口测速
-        reportAssetSpeed: true, // 静态资源测速
-        spa: true // spa 应用页面跳转的时候开启 pv 计算
-      });
-      `
-    ],
-
     /*************** start 添加百度统计 ***********/
     [
       "script",
@@ -60,6 +44,25 @@ module.exports = {
         `
     ],
     /*************** end 添加百度统计 ***********/
+    /*************** start 添加谷歌统计 ***********/
+    [
+      "script",
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-YFEQY02L6Q",
+        async: true
+      }
+    ],
+    [
+      "script",
+      {},
+      `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YFEQY02L6Q');
+      `
+    ],
+    /*************** end 添加谷歌统计 ***********/
     [
       "link",
       {
