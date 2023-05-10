@@ -8,6 +8,7 @@
     "deploy": "tcb framework deploy"
   },
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.9.9",
     "vuepress": "1.8.2",
     "vuepress-plugin-permalink-pinyin": "1.1.0",
     "vuepress-theme-reco": "1.6.15"

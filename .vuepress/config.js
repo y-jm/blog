@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
+    //自定义复制插件
     require('./vuepress-plugin-copy/index.js'),
     // md文件支持中文文件名
     [
@@ -20,6 +21,12 @@ module.exports = {
         separator: "-", // Separator of the slug, default: '-'
       },
     ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-YFEQY02L6Q' //替换成自己实际申请的ID
+      }
+    ]
   ],
   "head": [
     [
@@ -37,20 +44,22 @@ module.exports = {
       });
       `
     ],
+
+    /*************** start 添加百度统计 ***********/
     [
       "script",
       {},
       `
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?da55d9221d1de559e6426dc6f12f5b46";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?da55d9221d1de559e6426dc6f12f5b46";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
         `
     ],
+    /*************** end 添加百度统计 ***********/
     [
       "link",
       {
