@@ -1,6 +1,6 @@
 ---
 title: js分页算法
-date: 2021-01-30 12:32:38
+date: 2021-01-30
 categories: javascript
 tags: javascript
 ---

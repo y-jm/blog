@@ -1,6 +1,6 @@
 ---
 title: 开机运行shell脚本
-date: 2021-07-15 17:10:11
+date: 2021-07-15
 categories:
  - linux
 tags:

@@ -1,6 +1,6 @@
 ---
 title: 使用docker搭建kms服务器
-date: 2022-09-16 19:48:50
+date: 2022-09-16
 tags:
 - kms
 - windows

@@ -1,6 +1,6 @@
 ---
 title: npm更换镜像源
-date: 2022-08-29 23:15
+date: 2022-08-29
 categories:
  - nodejs
 tags:

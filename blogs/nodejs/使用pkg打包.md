@@ -1,6 +1,6 @@
 ---
 title: 使用pkg打包
-date: 2021-12-27 21:04
+date: 2021-12-27
 categories:
  - nodejs
 tags:

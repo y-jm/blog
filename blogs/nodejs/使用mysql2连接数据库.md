@@ -1,8 +1,7 @@
 ---
 title: 使用mysql2连接数据库
-date: 2022-08-29 22:10
-categories:
- - nodejs
+date: 2022-08-29
+categories: nodejs
 ---
 ## 1.安装
 ```bash

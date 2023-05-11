@@ -1,8 +1,7 @@
 ---
 title: 多个SSHKey配置
-date: 2021-07-26 21:40:46
-tags:
-- git
+date: 2021-07-26
+tags: git
 ---
 
 ## 简述

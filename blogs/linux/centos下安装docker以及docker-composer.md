@@ -1,8 +1,7 @@
 ---
 title: centos下安装docker以及docker-composer
-date: 2020-04-30 15:06:30
-categories:
-- linux
+date: 2020-04-30
+categories: linux
 tags:
 - centos
 - docker

@@ -1,6 +1,6 @@
 ---
 title: 使用webhook自动更新远程git仓库
-date: 2021-12-08 01:00:46
+date: 2021-12-08
 tags:
 - git
 - nodejs

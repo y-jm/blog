@@ -1,6 +1,6 @@
 ---
 title: Centos7.8安装nginx
-date: 2021-02-18 17:16:11
+date: 2021-02-18
 categories:
  - linux
 tags:

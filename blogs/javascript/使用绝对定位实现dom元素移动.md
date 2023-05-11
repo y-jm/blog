@@ -1,8 +1,7 @@
 ---
 title: 使用绝对定位实现dom元素移动
-date: 2021-11-15 22:55
-categories:
- - javascript
+date: 2021-11-15
+categories: javascript
 ---
 
 ```javascript

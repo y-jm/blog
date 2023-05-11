@@ -1,10 +1,8 @@
 ---
 title: openresty设置开机启动
-date: 2020-02-24 13:21:48
-categories:
-- nginx
-tags: 
-- openresty
+date: 2020-02-24
+categories: nginx
+tags: openresty
 ---
 
 ## 1. 在系统服务目录里创建nginx.service文件

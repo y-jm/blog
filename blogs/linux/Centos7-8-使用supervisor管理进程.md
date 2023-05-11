@@ -1,6 +1,6 @@
 ---
 title: Centos7.8 使用supervisor管理进程
-date: 2021-06-18 20:02:30
+date: 2021-06-18
 tags:
 - centos
 - linux

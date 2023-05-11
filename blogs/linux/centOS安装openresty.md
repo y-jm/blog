@@ -1,8 +1,7 @@
 ---
 title: openresty(一)安装
-date: 2020-02-25 16:17:55
-categories:
-- linux
+date: 2020-02-25
+categories: linux
 tags:
 - nginx
 - openresty

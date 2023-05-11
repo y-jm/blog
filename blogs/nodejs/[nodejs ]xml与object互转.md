@@ -1,8 +1,7 @@
 ---
 title: (nodejs)xml与object互转
-date: 2022-09-07 18:00
-categories:
- - nodejs
+date: 2022-09-07
+categories: nodejs
 ---
 ## 1.安装
 ```bash

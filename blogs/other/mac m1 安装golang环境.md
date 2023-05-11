@@ -1,6 +1,6 @@
 ---
 title: mac m1 安装golang环境
-date: 2022-04-03 22:18:28
+date: 2022-04-03
 tags:
 - golang
 - mac

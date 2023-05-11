@@ -1,6 +1,6 @@
 ---
 title: iptable安装
-date: 2021-07-18 23:45
+date: 2021-07-18
 categories:
  - linux
 tags:

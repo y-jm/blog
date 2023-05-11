@@ -1,8 +1,7 @@
 ---
 title: 原生JS手势判断
-date: 2021-07-18 23:55
-categories:
- - javascript
+date: 2021-07-18
+categories: javascript
 ---
 # 原生JS手势判断
 

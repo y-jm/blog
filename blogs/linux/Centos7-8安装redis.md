@@ -1,6 +1,6 @@
 ---
 title: Centos7.8安装redis
-date: 2021-04-30 15:28:11
+date: 2021-04-30
 tags:
 - redis
 - centos

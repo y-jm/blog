@@ -1,8 +1,7 @@
 ---
 title: linux查看端口占用
-date: 2023-03-13 12:53:09
-categories:
-- linux
+date: 2023-03-13
+categories: linux
 ---
 1.使用 netstat 命令：
 

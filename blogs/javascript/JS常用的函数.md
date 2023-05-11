@@ -1,6 +1,6 @@
 ---
 title: JS常用函数
-date: 2021-11-10 19:11:14
+date: 2021-11-10
 categories: 前端
 tags:
 - javascript

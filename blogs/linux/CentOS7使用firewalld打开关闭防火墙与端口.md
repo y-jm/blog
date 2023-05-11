@@ -1,8 +1,7 @@
 ---
 title: CentOS7使用firewalld打开关闭防火墙与端口
-date: 2020-03-01 11:28:14
-categories:
-- liunx
+date: 2020-03-01
+categories: liunx
 tags:
 - linux
 - centos

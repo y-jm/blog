@@ -1,10 +1,9 @@
 ---
 title: Centos7安装nvm
-date: 2021-08-17 19:16:11
+date: 2021-08-17
 categories:
  - linux
-tags:
-- nodejs
+tags: nodejs
 ---
 
 ### 1.使用镜像源

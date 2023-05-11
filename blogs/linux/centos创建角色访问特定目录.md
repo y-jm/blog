@@ -1,6 +1,6 @@
 ---
 title: centos创建角色访问特定目录
-date: 2021-11-08 20:49
+date: 2021-11-08
 categories:
  - linux
 tags:

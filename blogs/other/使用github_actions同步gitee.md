@@ -1,6 +1,6 @@
 ---
 title: 使用github_actions完成github仓库和gitee仓库同步
-date: 2022-08-31 23:14:46
+date: 2022-08-31
 tags:
 - github
 - gitee

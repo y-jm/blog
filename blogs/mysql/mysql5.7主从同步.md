@@ -1,6 +1,6 @@
 ---
 title: mysql5.7主从同步
-date: 2021-07-18 23:52
+date: 2021-07-18
 categories:
  - mysql
 tags:

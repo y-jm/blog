@@ -1,6 +1,6 @@
 ---
 title: js接收二进制文件并下载
-date: 2021-12-07 23:06:14
+date: 2021-12-07
 categories: 前端
 tags:
 - javascript

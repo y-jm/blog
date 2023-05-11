@@ -1,8 +1,7 @@
 ---
 title: 使用scp传输文件
-date: 2022-06-16 14:47:00
-categories:
-- linux
+date: 2022-06-16
+categories: linux
 ---
 ## 1.上传
 ```bash

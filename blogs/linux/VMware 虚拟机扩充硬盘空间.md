@@ -1,6 +1,6 @@
 ---
 title: VMware 虚拟机扩充硬盘空间
-date: 2021-07-18 23:53
+date: 2021-07-18
 categories:
  - linux
 tags:

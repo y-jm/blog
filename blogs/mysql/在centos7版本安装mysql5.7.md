@@ -1,6 +1,6 @@
 ---
 title: 在centos7版本安装mysql5.7
-date: 2021-07-19 0:02
+date: 2021-07-19
 categories:
  - mysql
 tags:

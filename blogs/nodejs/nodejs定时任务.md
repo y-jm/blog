@@ -1,8 +1,7 @@
 ---
 title: nodejs定时任务
-date: 2022-08-29 23:10
-categories:
- - nodejs
+date: 2022-08-29
+categories: nodejs
 ---
 
 ## 1.安装

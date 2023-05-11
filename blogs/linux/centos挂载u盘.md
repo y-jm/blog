@@ -1,6 +1,6 @@
 ---
 title: centos挂载u盘
-date: 2021-07-18 23:49
+date: 2021-07-18
 categories:
  - linux
 tags:

@@ -1,6 +1,6 @@
 ---
 title: ubuntu20安装nvm
-date: 2021-08-17 19:20:00
+date: 2021-08-17
 categories:
  - linux
 tags:

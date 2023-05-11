@@ -1,8 +1,7 @@
 ---
 title: docker安装bitwarden
-date: 2022-05-05 20:58:28
-tags:
-- docker
+date: 2022-05-05
+tags: docker
 ---
 
 ## 1.准备

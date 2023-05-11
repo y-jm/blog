@@ -1,6 +1,6 @@
 ---
 title: brew更换清华源
-date: 2022-07-07 20:58:00
+date: 2022-07-07
 tags:
 - mac
 - brew

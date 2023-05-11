@@ -5,6 +5,7 @@ export default{
         //异步加载，防止阻塞
         setTimeout(()=>{
             let pre=document.querySelectorAll('div[class*="language-"] pre');
+            if(!pre) return "";
             pre.forEach(el=>{
                 //防止重复写入节点
                 if(el.classList.contains("code-copy-el")) return;

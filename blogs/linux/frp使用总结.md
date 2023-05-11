@@ -1,6 +1,6 @@
 ---
 title: frp使用总结
-date: 2021-06-11 09:41:10
+date: 2021-06-11
 tags:
 - frp
 - centos

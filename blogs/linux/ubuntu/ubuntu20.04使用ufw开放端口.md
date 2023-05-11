@@ -1,14 +1,12 @@
 ---
-title: ubuntu20.04使用ufw开启端口
-date: 2023-02-04 19:38:00
-categories:
-- linux
+title: ubuntu使用ufw开启端口
+date: 2023-02-04
+categories: ubuntu
 ---
-
+ubuntu版本为20.04
 ## 1.查看防火墙状态
 ```bash
-    sudo ufw status
-# 打印状态
+sudo ufw status # 打印状态
 Status: active #开启
 Status: inactive #关闭
 ```

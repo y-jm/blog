@@ -1,10 +1,8 @@
 ---
 title: window 安装 nvm
-date: 2021-02-02 11:36:15
-categories:
-- windows
-tags:
-- nodejs
+date: 2021-02-02
+categories: windows
+tags: nodejs
 ---
 
 ## 1.下载

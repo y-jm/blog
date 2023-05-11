@@ -1,8 +1,7 @@
 ---
 title: openresty(二)使用lua开发
-date: 2020-02-26 16:12:48
-categories:
-- liunx
+date: 2020-02-26
+categories: liunx
 tags:
 - nginx
 - openresty

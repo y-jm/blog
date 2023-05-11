@@ -1,6 +1,6 @@
 ---
 title: mac m1 安装oh-my-zsh
-date: 2021-07-19 00:04
+date: 2021-07-19
 categories:
  - macos
 tags:

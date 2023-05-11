@@ -1,8 +1,7 @@
 ---
 title: nginx同一个端口多域名配置并使用反向代理frp内网穿透
-date: 2020-11-26 17:39:39
-tags:
-- nginx
+date: 2020-11-26
+tags: nginx
 ---
 
 ## 1.简述
