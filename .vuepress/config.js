@@ -29,6 +29,17 @@ module.exports = {
     ]
   ],
   "head": [
+    [
+      "script",
+      {},
+      `
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "krd63wp8gx");
+        `
+    ],
     /*************** start 添加百度统计 ***********/
     [
       "script",
@@ -101,7 +112,7 @@ module.exports = {
     "author": "sun",
     "authorAvatar": "https://img.xiyangyang.cc/blog/baracktocat.jpg",
     "record": "湘ICP备2021011916号-1",
-    "recordLink":"https://beian.miit.gov.cn/",
+    "recordLink": "https://beian.miit.gov.cn/",
   },
   "markdown": {
     "lineNumbers": true
