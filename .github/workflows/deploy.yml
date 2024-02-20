@@ -20,41 +20,50 @@ jobs:
     runs-on: Ubuntu-20.04
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Install Node.js
-      uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14.15.0'
-      # 1.安装依赖
-    - name: npm install
-      run: npm install
-    - name: npm run build
-
-    # 2.生成静态文件
-      run: npm run build
-      
-    # 3.开始打包到服务器
-    - name: depoly
-      uses: burnett01/rsync-deployments@5.2.1
-      with:
-        switches: -avzr --delete
-        #需要上传到服务器上的文件的目录
-        path: dist/
-        #服务器公网 IP 或域名。
-        remote_host: ${{ secrets.REMOTE_HOST }}
-        remote_port: ${{ secrets.REMOTE_PORT }}
-        #服务器 SSH 用户名。
-        remote_user: ${{ secrets.REMOTE_USER }}
-        #文件上传到服务器上保存的目录。
-        remote_path: ${{ secrets.REMOTE_PATH }}
-        #远程 ssh 密钥
-        remote_key: ${{ secrets.SERVER_SSH_KEY }}
+      - name: Install Node.js
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.15.0'
+        # 1.安装依赖
+      - name: npm install
+      # 2.生成静态文件
+        run: npm run build
+      # 3.开始打包到服务器
+      - name: depoly
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avzr --delete
+          #需要上传到服务器上的文件的目录
+          path: dist/
+          #服务器公网 IP 或域名。
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_port: ${{ secrets.REMOTE_PORT }}
+          #服务器 SSH 用户名。
+          remote_user: ${{ secrets.REMOTE_USER }}
+          #文件上传到服务器上保存的目录。
+          remote_path: ${{ secrets.REMOTE_PATH }}
+          #远程 ssh 密钥
+          remote_key: ${{ secrets.SERVER_SSH_KEY }}
   
-    # 4.同步到gitee
-    - name: sync_gitee
-      uses: wearerequired/git-mirror-action@master
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-      with:
-        source-repo: "git@github.com:y-jm/blog.git"
-        destination-repo: "git@gitee.com:ouyjm/blog.git"
+  sync_gitee:
+    runs-on: ubuntu-latest
+    steps:
+        # 4.同步到gitee
+      - name: sync_gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        with:
+          source-repo: "git@github.com:y-jm/blog.git"
+          destination-repo: "git@gitee.com:ouyjm/blog.git"
+  
+  sync_coding_net:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.CODING_NET_PRIVATE_KEY }}
+        with:
+          source-repo: "git@github.com:y-jm/blog.git"
+          destination-repo: "git@e.coding.net:jank-yang/blog/Vblog.git"
